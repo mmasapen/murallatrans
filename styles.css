@@ -184,7 +184,7 @@ button { cursor: pointer; }
 
 .logistics { overflow:hidden; }
 .logistics::before { content:""; position:absolute; width:620px; height:620px; border-radius:50%; border:1px solid rgba(255,255,255,.06); right:-260px; top:-180px; }
-.logistics-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.logistics-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
 .logistics-card { min-height:390px; display:flex; flex-direction:column; border:1px solid #34383d; border-radius:var(--radius); padding:30px; background:linear-gradient(145deg,#181b1e,#111315); transition:transform .25s ease,border-color .25s ease; }
 .logistics-card:hover { transform:translateY(-6px); border-color:#555b62; }
 .card-index { width:52px; height:52px; display:grid; place-items:center; border-radius:50%; border:1px solid #42474d; color:var(--red); font-weight:900; font-size:.76rem; margin-bottom:auto; }
@@ -194,7 +194,15 @@ button { cursor: pointer; }
 .logistics-card a::after { content:"→"; color:var(--red); transition:transform .2s ease; }
 .logistics-card a:hover::after { transform:translateX(5px); }
 
-.company { background:#fff; }
+.company {   
+  
+            background-image: 
+              linear-gradient(rgba(255,255,255,.90), rgba(255,255,255,.90)),
+            url("./assets/fondo_historia.png");
+             background-size: 100% auto;
+              background-position: center;
+              background-repeat: no-repeat;
+}
 .timeline { max-width:1050px; margin:25px 0 90px auto; border-left:1px solid var(--line); }
 .timeline-item { position:relative; display:grid; grid-template-columns:180px 1fr; gap:32px; padding:0 0 55px 44px; }
 .timeline-item:last-child { padding-bottom:0; }
@@ -202,7 +210,6 @@ button { cursor: pointer; }
 .timeline-year { font-size:2.3rem; line-height:1; font-weight:900; letter-spacing:-.055em; }
 .timeline-body h3 { margin:0 0 7px; font-size:1.15rem; }
 .timeline-body p { margin:0; color:var(--muted); }
-.company-split { display:grid; grid-template-columns:1.2fr .8fr; gap:20px; }
 .protocol, .service-summary { border-radius:var(--radius); padding:42px; }
 .protocol { background:var(--dark); color:#fff; }
 .protocol h3, .service-summary h3 { font-size:clamp(2rem,3vw,3.1rem); line-height:1; letter-spacing:-.045em; margin:0 0 22px; }
@@ -265,7 +272,7 @@ textarea { resize:vertical; min-height:150px; }
 .form-status.error { color:#b31117; }
 .form-status.success { color:#237b4b; }
 .map-wrap { margin-top:80px; width:min(100%, 1440px); }
-.map-wrap iframe { width:100%; height:440px; border:0; display:block; filter:grayscale(100%) contrast(1.05); }
+.map-wrap iframe { width:100%; height:440px; border:0; display:block; /*filter:grayscale(100%)*/}
 
 .site-footer { background:var(--dark); color:#fff; }
 .footer-top { display:grid; grid-template-columns:1.4fr repeat(3,1fr); gap:40px; padding:70px 0 50px; }
@@ -305,7 +312,11 @@ textarea { resize:vertical; min-height:150px; }
   .feature-grid { grid-template-columns:1fr 1fr; }
   .logistics-grid { grid-template-columns:1fr; }
   .logistics-card { min-height:310px; }
-  .company-split { grid-template-columns:1fr; }
+  .company-split {  display: grid;
+                  display: grid;
+                  grid-template-columns: 1fr;
+                  width: 100%;
+        }
   .service-mini-grid { grid-template-columns:1fr 1fr; }
   .benefit-grid { grid-template-columns:1fr 1fr 1fr; }
   .contact-grid { grid-template-columns:1fr; gap:45px; }
