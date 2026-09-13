@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -220 1200 1200" role="img" aria-labelledby="t d">
+<title id="t">Carga paletizada</title><desc id="d">Imagen temporal editable para sustituir por una fotografía definitiva.</desc>
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fafaf8"/><stop offset="1" stop-color="#e9e9e4"/></linearGradient>
+  <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="26" flood-opacity=".16"/></filter>
+</defs>
+<rect x="0" y="-220" width="1200" height="1200" fill="url(#g)"/>
+<circle cx="1015" cy="118" r="190" fill="#e31b23" opacity=".10"/>
+<circle cx="112" cy="690" r="210" fill="#ffffff" opacity=".20"/>
+
+<g transform="translate(200 120)" filter="url(#s)">
+ <rect x="40" y="420" width="720" height="40" rx="10" fill="#151719"/>
+ <rect x="120" y="125" width="220" height="135" rx="16" fill="#e31b23"/><rect x="365" y="125" width="220" height="135" rx="16" fill="#151719"/><rect x="245" y="280" width="220" height="135" rx="16" fill="#e31b23"/>
+ <path d="M95 485h610" stroke="#151719" stroke-width="18" stroke-linecap="round"/><path d="M165 460v80M335 460v80M505 460v80M675 460v80" stroke="#151719" stroke-width="18"/>
+</g>
+</svg>

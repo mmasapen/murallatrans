@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -220 1200 1200" role="img" aria-labelledby="t d">
+<title id="t">Servicio exprés dedicado</title><desc id="d">Imagen temporal editable para sustituir por una fotografía definitiva.</desc>
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#171a1d"/><stop offset="1" stop-color="#2b2f33"/></linearGradient>
+  <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="26" flood-opacity=".16"/></filter>
+</defs>
+<rect x="0" y="-220" width="1200" height="1200" fill="url(#g)"/>
+<circle cx="1015" cy="118" r="190" fill="#e31b23" opacity=".10"/>
+<circle cx="112" cy="690" r="210" fill="#ffffff" opacity=".20"/>
+
+<g transform="translate(120 155)" filter="url(#s)">
+ <rect x="170" y="150" width="590" height="230" rx="32" fill="#fff"/>
+ <path d="M600 150h160l120 118v112H600z" fill="#ecece8"/>
+ <circle cx="300" cy="395" r="60" fill="#e31b23"/><circle cx="300" cy="395" r="24" fill="#151719"/>
+ <circle cx="720" cy="395" r="60" fill="#e31b23"/><circle cx="720" cy="395" r="24" fill="#151719"/>
+ <path d="M40 185h230M85 245h170M20 305h210" stroke="#e31b23" stroke-width="20" stroke-linecap="round"/>
+ <path d="m400 210 78 0-55 74h64l-108 94 38-74h-62z" fill="#151719"/>
+</g>
+</svg>
