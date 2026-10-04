@@ -60,11 +60,16 @@ const translations = {
     'contact.eyebrow': 'Contacto', 'contact.title': '¿Tienes alguna duda o quieres más información?', 'contact.intro': 'Ponte en contacto con nosotros y cuéntanos qué necesitas. Te ayudaremos a valorar la opción de transporte o logística más adecuada.',
     'contact.addressLabel': 'Dirección', 'contact.emailLabel': 'Correo electrónico', 'contact.phoneLabel': 'Teléfono', 'contact.hoursLabel': 'Horario', 'contact.hours': 'Lunes a viernes · 08:00 a 19:00',
     'form.name': 'Nombre', 'form.email': 'Correo electrónico', 'form.phone': 'Teléfono', 'form.subject': 'Asunto', 'form.message': 'Mensaje (opcional)',
-    'form.privacy': 'He leído y acepto la <a href="https://www.murallatrans.com/es/privacidad/" target="_blank" rel="noopener">política de privacidad</a>.',
+    'form.privacy': 'He leído y acepto la <a href="privacidad.html">política de privacidad</a>.',
     'form.submit': 'Enviar consulta', 'form.note': 'Esta reconstrucción es estática: al enviar, se abrirá tu aplicación de correo con el mensaje preparado.',
     'form.error': 'Revisa los campos obligatorios y acepta la política de privacidad.', 'form.success': 'Preparando tu correo…',
     'footer.slogan': '75 años trabajando para que mañana sea mañana.', 'footer.address': 'Dirección', 'footer.contact': 'Contacto', 'footer.hours': 'Horario', 'footer.hoursText': 'Lunes a viernes<br>08:00 a 19:00',
     'footer.legal': 'Aviso legal', 'footer.privacy': 'Política de privacidad', 'footer.cookies': 'Política de cookies', 'footer.accessibility': 'Declaración de accesibilidad',
+    'footer.cookieSettings': 'Preferencias de cookies',
+    'cookies.title': 'Tu privacidad importa',
+    'cookies.text': 'Utilizamos almacenamiento técnico para recordar tus preferencias y, si lo aceptas, cargamos servicios externos como Google Maps. Puedes aceptar o rechazar los servicios no esenciales. Consulta la <a href="cookies.html">política de cookies</a>.',
+    'cookies.accept': 'Aceptar todas', 'cookies.reject': 'Rechazar no esenciales',
+    'cookies.mapBlocked': 'El mapa de Google se cargará solo si aceptas las cookies y servicios externos.', 'cookies.loadMap': 'Aceptar y cargar mapa',
     'footer.kit': 'PROGRAMA KIT DIGITAL COFINANCIADO POR LOS FONDOS NEXT GENERATION (UE) DEL MECANISMO DE RECUPERACIÓN Y RESILIENCIA.',
     // Textos fijos / fuera del selector de idioma (referencias del Word).
     'static.pageTitle': 'Murallatrans | Transporte y logística',
@@ -138,11 +143,16 @@ const translations = {
     'contact.eyebrow': 'Contacte', 'contact.title': 'Tens algun dubte o vols més informació?', 'contact.intro': "Posa't en contacte amb nosaltres i explica'ns què necessites. T'ajudarem a valorar l'opció de transport o logística més adequada.",
     'contact.addressLabel': 'Adreça', 'contact.emailLabel': 'Correu electrònic', 'contact.phoneLabel': 'Telèfon', 'contact.hoursLabel': 'Horari', 'contact.hours': 'Dilluns a divendres · 08:00 a 19:00',
     'form.name': 'Nom', 'form.email': 'Correu electrònic', 'form.phone': 'Telèfon', 'form.subject': 'Assumpte', 'form.message': 'Missatge (opcional)',
-    'form.privacy': 'He llegit i accepto la <a href="https://www.murallatrans.com/privacidad/" target="_blank" rel="noopener">política de privacitat</a>.',
+    'form.privacy': 'He llegit i accepto la <a href="privacidad.html">política de privacitat</a>.',
     'form.submit': 'Enviar consulta', 'form.note': "Aquesta reconstrucció és estàtica: en enviar, s'obrirà la teva aplicació de correu amb el missatge preparat.",
     'form.error': 'Revisa els camps obligatoris i accepta la política de privacitat.', 'form.success': 'Preparant el teu correu…',
     'footer.slogan': '75 anys treballant perquè demà sigui demà.', 'footer.address': 'Adreça', 'footer.contact': 'Contacte', 'footer.hours': 'Horari', 'footer.hoursText': 'Dilluns a divendres<br>08:00 a 19:00',
     'footer.legal': 'Avís legal', 'footer.privacy': 'Política de privacitat', 'footer.cookies': 'Política de cookies', 'footer.accessibility': "Declaració d'accessibilitat",
+    'footer.cookieSettings': 'Preferències de cookies',
+    'cookies.title': 'La teva privacitat importa',
+    'cookies.text': 'Utilitzem emmagatzematge tècnic per recordar les teves preferències i, si ho acceptes, carreguem serveis externs com Google Maps. Pots acceptar o rebutjar els serveis no essencials. Consulta la <a href="cookies.html">política de cookies</a>.',
+    'cookies.accept': 'Acceptar-les totes', 'cookies.reject': 'Rebutjar les no essencials',
+    'cookies.mapBlocked': 'El mapa de Google només es carregarà si acceptes les cookies i els serveis externs.', 'cookies.loadMap': 'Acceptar i carregar el mapa',
     'footer.kit': 'PROGRAMA KIT DIGITAL COFINANÇAT PELS FONS NEXT GENERATION (UE) DEL MECANISME DE RECUPERACIÓ I RESILIÈNCIA.',
     // Textos fixos / fora del selector d'idioma (referències del Word).
     'static.pageTitle': 'Murallatrans | Transport i logística',
@@ -162,6 +172,7 @@ const languageButtons = document.querySelectorAll('.lang-btn');
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('#mobile-menu');
 const header = document.querySelector('.site-header');
+const headerPhone = document.querySelector('.header-phone');
 const backToTop = document.querySelector('.back-to-top');
 const form = document.querySelector('#contact-form');
 const formStatus = document.querySelector('.form-status');
@@ -199,6 +210,10 @@ function applyLanguage(lang) {
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-pressed', String(active));
   });
+  if (headerPhone) {
+    const callLabel = translations[lang]['static.headerCall'];
+    if (callLabel) headerPhone.setAttribute('aria-label', `${callLabel}: 938 86 02 08`);
+  }
   localStorage.setItem('murallatrans-language', lang);
   updateHeroVideoButton();
 }
@@ -297,3 +312,96 @@ form.addEventListener('submit', event => {
   const mailto = `mailto:murallatrans@murallatrans.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.location.href = mailto;
 });
+
+/* =========================================================
+   CONSENTIMIENTO DE COOKIES / SERVICIOS EXTERNOS
+   - Se guarda la decisión durante 12 meses en localStorage.
+   - Google Maps no se carga antes de aceptar servicios no esenciales.
+   - El usuario puede reabrir el panel desde el footer.
+   ========================================================= */
+const COOKIE_CONSENT_KEY = 'murallatrans-cookie-consent';
+const COOKIE_CONSENT_VERSION = 1;
+const COOKIE_CONSENT_MAX_AGE = 365 * 24 * 60 * 60 * 1000;
+const cookieBanner = document.querySelector('#cookie-banner');
+const cookieAccept = document.querySelector('#cookie-accept');
+const cookieReject = document.querySelector('#cookie-reject');
+const cookieSettings = document.querySelector('#cookie-settings-button');
+const mapConsentButton = document.querySelector('#map-consent-button');
+const mapPlaceholder = document.querySelector('#map-consent-placeholder');
+const consentMap = document.querySelector('.map-wrap iframe[data-cookie-src]');
+
+function readCookieConsent() {
+  try {
+    const raw = localStorage.getItem(COOKIE_CONSENT_KEY);
+    if (!raw) return null;
+    const value = JSON.parse(raw);
+    if (value.version !== COOKIE_CONSENT_VERSION || !value.savedAt) return null;
+    if ((Date.now() - value.savedAt) > COOKIE_CONSENT_MAX_AGE) return null;
+    return value.status === 'accepted' || value.status === 'rejected' ? value.status : null;
+  } catch (error) {
+    return null;
+  }
+}
+
+function saveCookieConsent(status) {
+  try {
+    localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify({
+      version: COOKIE_CONSENT_VERSION,
+      status,
+      savedAt: Date.now()
+    }));
+  } catch (error) {
+    // Si el navegador bloquea localStorage, la web seguirá funcionando.
+  }
+}
+
+function loadExternalMap() {
+  if (!consentMap || consentMap.getAttribute('src')) return;
+  const source = consentMap.dataset.cookieSrc;
+  if (!source) return;
+  consentMap.src = source;
+  consentMap.hidden = false;
+  if (mapPlaceholder) mapPlaceholder.hidden = true;
+}
+
+function unloadExternalMap() {
+  if (!consentMap) return;
+  consentMap.removeAttribute('src');
+  consentMap.hidden = true;
+  if (mapPlaceholder) mapPlaceholder.hidden = false;
+}
+
+function closeCookieBanner() {
+  if (cookieBanner) cookieBanner.hidden = true;
+}
+
+function openCookieBanner() {
+  if (!cookieBanner) return;
+  cookieBanner.hidden = false;
+  cookieBanner.querySelector('button')?.focus({ preventScroll: true });
+}
+
+function setCookieConsent(status) {
+  saveCookieConsent(status);
+  if (status === 'accepted') loadExternalMap();
+  else unloadExternalMap();
+  closeCookieBanner();
+}
+
+cookieAccept?.addEventListener('click', () => setCookieConsent('accepted'));
+cookieReject?.addEventListener('click', () => setCookieConsent('rejected'));
+cookieSettings?.addEventListener('click', openCookieBanner);
+mapConsentButton?.addEventListener('click', () => setCookieConsent('accepted'));
+
+const initialCookieConsent = readCookieConsent();
+if (initialCookieConsent === 'accepted') {
+  loadExternalMap();
+  closeCookieBanner();
+} else if (initialCookieConsent === 'rejected') {
+  unloadExternalMap();
+  closeCookieBanner();
+} else {
+  unloadExternalMap();
+  openCookieBanner();
+}
+

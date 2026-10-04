@@ -35,9 +35,9 @@
           <span aria-hidden="true">/</span>
           <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false">CA</button>
         </div>
-        <a class="header-phone" href="tel:+34938860208" aria-label="938 86 02 08">
+        <a class="header-phone" href="tel:+34938860208" aria-label="Llámanos: 938 86 02 08">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.5 15.5 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.1.36 2.27.56 3.48.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.57 21 3 13.43 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.2 2.38.56 3.48a1 1 0 0 1-.25 1.02l-2.19 2.29Z"></path></svg>
-          <span>Truca'ns</span>
+          <span data-i18n="static.headerCall">Llámanos</span>
         </a>
         <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú">
           <span></span><span></span><span></span>
@@ -298,11 +298,31 @@ Operaciones triangulares.</p>
               <div><h3 data-i18n="services.dedicatedTitle">Logística dedicada</h3><p data-i18n="services.dedicatedLead">Externalizar parte de la logística puede aportar flexibilidad, conocimiento especializado y una estructura de costes más adaptable.</p></div>
             </div>
             <div class="benefit-grid">
-              <div><strong>01</strong><h4 data-i18n="services.b1Title">Reducir costes indirectos</h4><p data-i18n="services.b1Text">Convertir parte de los costes fijos de espacios, tecnología, personal o seguridad en costes vinculados al servicio utilizado.</p></div>
-              <div><strong>02</strong><h4 data-i18n="services.b2Title">Ganar organización</h4><p data-i18n="services.b2Text">Ajustar recursos y operativa logística a las necesidades reales de cada momento.</p></div>
-              <div><strong>03</strong><h4 data-i18n="services.b3Title">Sumar experiencia técnica</h4><p data-i18n="services.b3Text">Aprovechar el conocimiento y la especialización de un socio logístico sin ampliar permanentemente la estructura interna.</p></div>
-              <div><strong>04</strong><h4 data-i18n="services.b4Title">Mejorar el rendimiento</h4><p data-i18n="services.b4Text">Apoyarse en procesos, tecnología y soluciones adaptadas a distintas áreas geográficas.</p></div>
-              <div><strong>05</strong><h4 data-i18n="services.b5Title">Centrarse en el negocio</h4><p data-i18n="services.b5Text">Liberar tiempo y recursos para concentrarse en la actividad principal mientras un equipo especializado gestiona la mercancía.</p></div>
+              <div>
+                <img class="dedicated-placeholder" src="./assets/placeholders/Gallery-01.png" alt="" loading="lazy">
+                <h4 data-i18n="services.b1Title">Reducir costes indirectos</h4>
+                <p data-i18n="services.b1Text">Convertir parte de los costes fijos de espacios, tecnología, personal o seguridad en costes vinculados al servicio utilizado.</p>
+              </div>
+              <div>
+                <img class="dedicated-placeholder" src="./assets/placeholders/Gallery-02.png" alt="" loading="lazy">
+                <h4 data-i18n="services.b2Title">Ganar organización</h4>
+                <p data-i18n="services.b2Text">Ajustar recursos y operativa logística a las necesidades reales de cada momento.</p>
+              </div>
+              <div>
+                <img class="dedicated-placeholder" src="./assets/placeholders/Gallery-03.png" alt="" loading="lazy">
+                <h4 data-i18n="services.b3Title">Sumar experiencia técnica</h4>
+                <p data-i18n="services.b3Text">Aprovechar el conocimiento y la especialización de un socio logístico sin ampliar permanentemente la estructura interna.</p>
+              </div>
+              <div>
+                <img class="dedicated-placeholder" src="./assets/placeholders/Gallery-04.png" alt="" loading="lazy">
+                <h4 data-i18n="services.b4Title">Mejorar el rendimiento</h4>
+                <p data-i18n="services.b4Text">Apoyarse en procesos, tecnología y soluciones adaptadas a distintas áreas geográficas.</p>
+              </div>
+              <div>
+                <img class="dedicated-placeholder" src="./assets/placeholders/Gallery-05.png" alt="" loading="lazy">
+                <h4 data-i18n="services.b5Title">Centrarse en el negocio</h4>
+                <p data-i18n="services.b5Text">Liberar tiempo y recursos para concentrarse en la actividad principal mientras un equipo especializado gestiona la mercancía.</p>
+              </div>
             </div>
           </article>
         </div>
@@ -360,7 +380,7 @@ Operaciones triangulares.</p>
             <label><span data-i18n="form.subject">Asunto</span><input type="text" name="subject" required=""></label>
           </div>
           <label><span data-i18n="form.message">Mensaje (opcional)</span><textarea name="message" rows="6"></textarea></label>
-          <label class="check-label"><input type="checkbox" name="privacy" required=""><span data-i18n-html="form.privacy">He leído y acepto la <a href="https://www.murallatrans.com/es/privacidad/" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
+          <label class="check-label"><input type="checkbox" name="privacy" required=""><span data-i18n-html="form.privacy">He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</span></label>
           <button class="btn btn-primary submit-btn" type="submit" data-i18n="form.submit">Enviar consulta</button>
           <p class="form-note" data-i18n="form.note">Esta reconstrucción es estática: al enviar, se abrirá tu aplicación de correo con el mensaje preparado.</p>
           <div class="form-status" role="status" aria-live="polite"></div>
@@ -368,7 +388,12 @@ Operaciones triangulares.</p>
       </div>
 
       <div class="map-wrap container reveal visible">
-        <iframe src="https://www.google.com/maps/d/embed?mid=141V18_wdT5BF9X9RjMkgmiy_jbggQCc&ll=41.95407606891543%2C2.28067548212882&z&noprof=1" width="640" height="480"></iframe>
+        <div class="map-consent-placeholder" id="map-consent-placeholder">
+          <div class="map-consent-icon" aria-hidden="true">⌖</div>
+          <p data-i18n="cookies.mapBlocked">El mapa de Google se cargará solo si aceptas las cookies y servicios externos.</p>
+          <button class="btn btn-primary" id="map-consent-button" type="button" data-i18n="cookies.loadMap">Aceptar y cargar mapa</button>
+        </div>
+        <iframe data-cookie-src="https://www.google.com/maps/d/embed?mid=141V18_wdT5BF9X9RjMkgmiy_jbggQCc&ll=41.95407606891543%2C2.28067548212882&z&noprof=1" title="Mapa de Murallatrans a Vic" width="640" height="480" loading="lazy" hidden></iframe>
       </div>
     </section>
   </main>
@@ -396,16 +421,30 @@ Operaciones triangulares.</p>
     <div class="container footer-bottom">
       <p>© <span id="year">2026</span> Murallatrans</p>
       <div class="legal-links">
-        <a href="https://www.murallatrans.com/es/aviso-legal/" target="_blank" rel="noopener" data-i18n="footer.legal">Aviso legal</a>
-        <a href="https://www.murallatrans.com/es/privacidad/" target="_blank" rel="noopener" data-i18n="footer.privacy">Política de privacidad</a>
-        <a href="https://www.murallatrans.com/cookies/" target="_blank" rel="noopener" data-i18n="footer.cookies">Política de cookies</a>
-        <a href="https://www.murallatrans.com/es/declaracio-daccessibilitat/" target="_blank" rel="noopener" data-i18n="footer.accessibility">Declaración de accesibilidad</a>
+        <a href="aviso-legal.html" data-i18n="footer.legal">Aviso legal</a>
+        <a href="privacidad.html" data-i18n="footer.privacy">Política de privacidad</a>
+        <a href="cookies.html" data-i18n="footer.cookies">Política de cookies</a>
+        <a href="accesibilidad.html" data-i18n="footer.accessibility">Declaración de accesibilidad</a>
+        <button class="cookie-settings-link" id="cookie-settings-button" type="button" data-i18n="footer.cookieSettings">Preferencias de cookies</button>
       </div>
     </div>
     <div class="kit-digital">
       <div class="container" data-i18n="footer.kit">PROGRAMA KIT DIGITAL COFINANCIADO POR LOS FONDOS NEXT GENERATION (UE) DEL MECANISMO DE RECUPERACIÓN Y RESILIENCIA.</div>
     </div>
   </footer>
+
+  <aside class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false" aria-labelledby="cookie-title" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-copy">
+        <strong id="cookie-title" data-i18n="cookies.title">Tu privacidad importa</strong>
+        <p data-i18n-html="cookies.text">Utilizamos almacenamiento técnico para recordar tus preferencias y, si lo aceptas, cargamos servicios externos como Google Maps. Puedes aceptar o rechazar los servicios no esenciales. Consulta la <a href="cookies.html">política de cookies</a>.</p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn cookie-reject" id="cookie-reject" type="button" data-i18n="cookies.reject">Rechazar no esenciales</button>
+        <button class="btn btn-primary" id="cookie-accept" type="button" data-i18n="cookies.accept">Aceptar todas</button>
+      </div>
+    </div>
+  </aside>
 
   <button class="back-to-top visible" type="button" aria-label="Volver arriba">↑</button>
   <script src="script.js"></script>
