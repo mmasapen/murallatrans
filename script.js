@@ -140,7 +140,7 @@ const translations = {
     'services.b3Title': 'Sumar experiència tècnica', 'services.b3Text': "Aprofitar el coneixement i l'especialització d'un soci logístic sense ampliar permanentment l'estructura interna.",
     'services.b4Title': 'Millorar el rendiment', 'services.b4Text': 'Basar-se en processos, tecnologia i solucions adaptades a diferents àrees geogràfiques.',
     'services.b5Title': 'Centrar-se en el negoci', 'services.b5Text': "Alliberar temps i recursos per concentrar-se en l'activitat principal mentre un equip especialitzat gestiona la mercaderia.",
-    'contact.eyebrow': 'Contacte', 'contact.title': 'Tens algun dubte o vols més informació?', 'contact.intro': "Posa't en contacte amb nosaltres i explica'ns què necessites. T'ajudarem a valorar l'opció de transport o logística més adequada.",
+    'contact.eyebrow': 'Contacte', 'contact.title': 'Tens cap dubte o vols més informació?', 'contact.intro': "Posa't en contacte amb nosaltres i explica'ns què necessites. T'ajudarem a valorar l'opció de transport o logística més adequada.",
     'contact.addressLabel': 'Adreça', 'contact.emailLabel': 'Correu electrònic', 'contact.phoneLabel': 'Telèfon', 'contact.hoursLabel': 'Horari', 'contact.hours': 'Dilluns a divendres · 08:00 a 19:00',
     'form.name': 'Nom', 'form.email': 'Correu electrònic', 'form.phone': 'Telèfon', 'form.subject': 'Assumpte', 'form.message': 'Missatge (opcional)',
     'form.privacy': 'He llegit i accepto la <a href="privacidad.html">política de privacitat</a>.',

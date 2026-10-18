@@ -11,6 +11,7 @@
   --red: #e31b23;
   --red-dark: #bd1118;
   --red-soft: #fff0f1;
+  --blue: #0f00b5;
   --white: #fff;
   --container: 1180px;
   --radius: 18px;
@@ -216,7 +217,7 @@ button { cursor: pointer; }
 .protocol p { color:#aeb3b8; }
 .protocol-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:9px; margin-top:35px; }
 .protocol-steps div { position:relative; display:grid; justify-items:center; align-content:start; gap:10px; padding:14px; border:1px solid #34383d; border-radius:12px; text-align:center; }
-.protocol-placeholder { width:100%; aspect-ratio:1 / 1; object-fit:cover; border-radius:0; margin-bottom:2px; border:0; }
+.protocol-placeholder { width:75%; aspect-ratio:1 / 1; object-fit:cover; border-radius:0; margin-bottom:2px; border:0; }
 .protocol-steps span { color:var(--red); font-size:.72rem; font-weight:900; line-height:1; }
 .protocol-steps strong { font-size:1rem; line-height:1.2; text-align:center; }
 .service-summary { background:var(--red); color:#fff; }
@@ -238,6 +239,7 @@ button { cursor: pointer; }
 .service-columns ul { margin:0; padding-left:19px; color:var(--muted); font-size:.86rem; }
 .service-columns li { margin:7px 0; }
 .text-link { display:inline-block; margin-top:30px; color:var(--red); font-weight:850; font-size:.88rem; }
+.text-link-blue { display:inline-block; margin-top:30px; color:var(--blue); font-weight:850; font-size:.88rem; }
 .service-mini-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 .service-panel.compact .service-panel-head { margin:0; }
 .service-panel.dedicated { background:var(--dark); color:#fff; border-color:var(--dark); }
@@ -283,7 +285,7 @@ textarea { resize:vertical; min-height:150px; }
 
 .site-footer { background:var(--dark); color:#fff; }
 .footer-top { display:grid; grid-template-columns:1.4fr repeat(3,1fr); gap:40px; padding:70px 0 50px; }
-.footer-brand img { width:230px; filter:brightness(0) invert(1); opacity:.92; }
+.footer-brand img { width:100px;  opacity:.92; }
 .footer-brand p { color:#9ca1a7; max-width:290px; margin-top:22px; }
 .footer-block { display:grid; align-content:start; gap:5px; }
 .footer-block > span { color:#72777e; font-size:.69rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; margin-bottom:7px; }
