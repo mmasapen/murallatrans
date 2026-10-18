@@ -217,7 +217,7 @@ button { cursor: pointer; }
 .protocol p { color:#aeb3b8; }
 .protocol-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:9px; margin-top:35px; }
 .protocol-steps div { position:relative; display:grid; justify-items:center; align-content:start; gap:10px; padding:14px; border:1px solid #34383d; border-radius:12px; text-align:center; }
-.protocol-placeholder { width:75%; aspect-ratio:1 / 1; object-fit:cover; border-radius:0; margin-bottom:2px; border:0; }
+.protocol-placeholder { width:75%;  border-radius:0; margin-bottom:2px; border:0; }
 .protocol-steps span { color:var(--red); font-size:.72rem; font-weight:900; line-height:1; }
 .protocol-steps strong { font-size:1rem; line-height:1.2; text-align:center; }
 .service-summary { background:var(--red); color:#fff; }
